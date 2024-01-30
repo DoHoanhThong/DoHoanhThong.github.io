@@ -8,13 +8,20 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('BG.jpg');
+            /* Đường dẫn đến tập tin ảnh nền */
+            background-size: cover;
+            /* Chỉnh kích thước ảnh để nó che đủ phần nền */
+            background-position: center;
+            /* Đặt ảnh nền ở giữa trang */
             margin: 0;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            color: white;
+            /* Đổi màu chữ sang trắng */
         }
         
         .container {
@@ -22,17 +29,19 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Thêm một lớp màu trắng nhẹ để chữ đỡ khó đọc */
         }
         
         h1 {
             color: #333;
+            /* Đối với các phần tử con có thể giữ màu chữ gốc hoặc thay đổi theo ý muốn */
         }
     </style>
 </head>
 
 <body>
-    <div class="ThongTin">
+    <div class="ThongTin container">
         <div class="FullName">
             <h1>Họ và tên: Đỗ Hoành Thông</h1>
         </div>
@@ -46,10 +55,9 @@
             <h1>Lớp: D21CQCN08-B</h1>
         </div>
         <div class="Address">
-            <h1>Địa chỉ: Liên Hiệp, Phúc Thọ, Hà Nội</h1>
+            <h1>Địa chỉ: Hà Nội</h1>
         </div>
     </div>
 </body>
-
 
 </html>
