@@ -61,5 +61,65 @@
         </div>
     </div>
 </body>
+<script>
+    class SinhVien {
+        constructor(maSV, hoTen, ngaySinh, lopHoc, diemGPA) {
+            this.maSV = maSV;
+            this.hoTen = hoTen;
+            this.ngaySinh = ngaySinh;
+            this.lopHoc = lopHoc;
+            this.diemGPA = diemGPA;
+        }
+
+        capNhatThongTin(maSV, hoTen, ngaySinh, lopHoc, diemGPA) {
+            this.maSV = maSV;
+            this.hoTen = hoTen;
+            this.ngaySinh = ngaySinh;
+            this.lopHoc = lopHoc;
+            this.diemGPA = diemGPA;
+        }
+
+        hienThiThongTin() {
+            console.log(`------------------------------------------`);
+            console.log(`Họ và tên: ${this.hoTen}`);
+            console.log(`Mã SV: ${this.maSV}`);
+            console.log(`Ngày sinh: ${this.ngaySinh}`);
+            console.log(`Lớp học: ${this.lopHoc}`);
+            console.log(`GPA: ${this.diemGPA}`);
+
+        }
+    }
+
+    function nhapSoLuongSV() {
+        let soLuong = parseInt(prompt("Nhập số lượng sinh viên:"));
+        return soLuong;
+    }
+
+    function taoDanhSachSinhVien() {
+        let soLuong = nhapSoLuongSV();
+        let danhSachSinhVien = [];
+        for (let i = 0; i < soLuong; i++) {
+            let maSV = prompt("Nhập mã sinh viên:");
+            let hoTen = prompt("Nhập họ và tên:");
+            let ngaySinh = prompt("Nhập ngày sinh:");
+            let lopHoc = prompt("Nhập lớp học:");
+            let diemGPA = parseFloat(prompt("Nhập điểm GPA:"));
+            danhSachSinhVien.push(new SinhVien(maSV, hoTen, ngaySinh, lopHoc, diemGPA));
+        }
+        return danhSachSinhVien;
+    }
+
+    function hienThiDanhSachSinhVien(danhSachSinhVien) {
+        console.log("Danh sách sinh viên:");
+        danhSachSinhVien.forEach(sv => sv.hienThiThongTin());
+    }
+
+    function main() {
+        let danhSachSinhVien = taoDanhSachSinhVien();
+        hienThiDanhSachSinhVien(danhSachSinhVien);
+    }
+
+    main();
+</script>
 
 </html>
